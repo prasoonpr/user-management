@@ -56,7 +56,7 @@ const adminLogout = async (req, res) => {
 
 // load adduser page
 const adduser = async (req, res) => {
-  try {
+  try {    
     if (req.session.admin) {
       const msg = req.flash("msg");
       res.render("adduser",{msg});
