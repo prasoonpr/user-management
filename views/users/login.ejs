@@ -1,0 +1,27 @@
+<%- include('../layout/header.ejs') %>
+
+
+    <div id="container1">
+       <header>Login</header>
+       
+       <form action="/login" method="post">
+          <fieldset>
+            <% if (msg) { %>
+               <p style="color: red"><%= msg %></p>
+               <% } %> 
+             
+             <input type="email" name="email" id="email" placeholder="E-mail" required>
+             <br/><br/>
+             <input type="password" name="password" id="password" placeholder="Password" required>
+             <br/> <br/> 
+             <input  type="submit" name="submit" id="submit" value="Login">
+             <br/> 
+             <a id="a1" href="./register">Don't have a account?Register</a>
+          </fieldset>
+       </form>
+    </div>
+
+
+
+
+<%- include('../layout/footer.ejs') %>

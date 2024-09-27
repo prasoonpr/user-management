@@ -1,0 +1,32 @@
+<%- include('../layout/header.ejs') %>
+
+
+    <div id="container">
+       <header>Register new account</header>
+       
+       <form action="/register" method="post">
+          <fieldset>
+            <% if (msg) { %>
+               <p style="color: red"><%= msg %></p>
+               <% } %> 
+             
+             <input type="text" name="username" id="username" placeholder="Username" required autofocus>
+             <br/><br/>
+             <input type="email" name="email" id="email" placeholder="E-mail" required>
+             <br/><br/>
+             <input type="text" name="mobile" id="mobile" placeholder="mobile" required>
+             <br/><br/>
+             <input type="password" name="password" id="password" placeholder="Password" required>
+             <br/> <br/> 
+             <input  type="submit" name="submit" id="submit" value="REGISTER">
+             <br/> 
+             <a id="a1" href="./login">alredy have a account?login</a>
+          </fieldset>
+       </form>
+    </div>
+
+
+    <script src="/styles/validation.js"></script>
+
+
+<%- include('../layout/footer.ejs') %>
