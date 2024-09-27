@@ -46,6 +46,8 @@ const insertDetails = async (req, res) => {
 //login page load
 const login = async (req, res) => {
   try {
+    console.log(req.session.user);
+    
     if (req.session.user) {
       res.redirect("/home");
     } else {
